@@ -1,7 +1,8 @@
 """ Sample problem featuring the observer pattern. """
 
 class Observer():
-    """ subscribe to the observable """
+    """ An interface for event observers """
 
-    def update(observable, arg):
+    def notify(self, arg):
+        """ Base method to send a notification """
         raise NotImplementedError

@@ -5,28 +5,16 @@ import argparse
 
 from pizza_oven import PizzaOven
 from sms_notification import SMSNotification
-from observable import Observable
-from observer import Observer
 
 def main():
     """ Execute the program """
     args = parse_args()
-    orderPizza(args.quantity)
-
-
-    pizzaSquaredOven = PizzaOven()
-    pizzaSquaredSubscriberSMS = SMSNotification()
-    pizzaSquaredOven.pizzaStartedEvent.subscribe(pizzaSquaredSubscriberSMS)
-
-    for x in range(0, int(args.quantity)):
-        pizzaSquaredOven.pizzaStarted()
-        pizzaSquaredOven.pizzaDone()
-        pizzaSquaredSubscriberSMS.update(pizzaSquaredOven.pizzaStartedEvent)
-
-    pizzaSquaredOven.pizzaStartedEvent.unsubscribe(pizzaSquaredSubscriber)
-
-def orderPizza(quantity):
-    print("Recorded a new pizza order: " + quantity)
+    pizza_oven = PizzaOven()
+    pizza_sms_notification = SMSNotification()
+    pizza_oven.pizza_started_event.subscribe(pizza_sms_notification)
+    for _ in range(int(args.quantity)):
+        pizza_oven.make_pizza()
+    pizza_oven.pizza_started_event.unsubscribe(pizza_sms_notification)
 
 def parse_args():
     """ Parse input arguments """
@@ -37,7 +25,6 @@ def parse_args():
         help="The number of pizzas to order.",
         required=True)
     return parser.parse_args()
-
 
 if __name__ == "__main__":
     main()
