@@ -3,7 +3,5 @@
 from observer import Observer
 
 class SMSNotification(Observer):
-    """ Sends an SMSM notification to a customer """
-
-    def notify(self, arg):
-        print("SMS notification: " + arg)
+    def notify(observable, arg):
+        print("SMS notification sent to customer")
