@@ -12,9 +12,13 @@ def main():
     pizza_oven = PizzaOven()
     pizza_sms_notification = SMSNotification()
     pizza_oven.pizza_started_event.subscribe(pizza_sms_notification)
+    #pizza_oven.pizza_prepped_event.subscribe(pizza_sms_notification)
+    pizza_oven.pizza_done_event.subscribe(pizza_sms_notification)
     for _ in range(int(args.quantity)):
         pizza_oven.make_pizza()
     pizza_oven.pizza_started_event.unsubscribe(pizza_sms_notification)
+    #pizza_oven.pizza_prepped_event.unsubscribe(pizza_sms_notification)
+    pizza_oven.pizza_done_event.unsubscribe(pizza_sms_notification)
 
 def parse_args():
     """ Parse input arguments """

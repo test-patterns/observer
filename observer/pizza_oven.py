@@ -1,5 +1,8 @@
 """ Sample problem featuring the observer pattern. """
 
+import random
+import time
+
 from observable import Observable
 
 class PizzaOven():
@@ -11,7 +14,7 @@ class PizzaOven():
     def make_pizza(self):
         """ Makes a pizza """
         self.pizza_started()
-        # wait
+        time.sleep(random.randint(1, 5))
         self.pizza_done()
 
     def pizza_started(self):
