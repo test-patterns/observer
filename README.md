@@ -13,8 +13,8 @@ Add a new SMS notification to the sequence in main.py to send a notification whe
 
 ### UML
 
-![alt text](http://yuml.me/6ad6620c.png)
-[edit](http://yuml.me/edit/6ad6620c)
+![alt text](http://yuml.me/7e39405c.png)
+[edit](http://yuml.me/edit/7e39405c)
 
 ### Previous output
 
