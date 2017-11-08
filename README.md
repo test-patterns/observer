@@ -3,13 +3,29 @@ Sample problem featuring the observer pattern.
 
 ## Task 1 - Add a notification
 
-Welcome to Pizza<sup>2</sup>! Our kitchen already send notifications when a new pizza has been started, and when a pizza has been baked, but we can't see when ingredients have been prepped. See for yourself by running the following command:
+Welcome to Pizza<sup>2</sup>! Our kitchen already sends notifications when a new pizza has just started cooking, and when a pizza is done, but we can't see when ingredients have been prepped. See for yourself by running the following command:
 
 ```
 python observer -q 3
 ```
 
 Add a new SMS notification to the sequence in main.py to send a notification when the pizza has been prepped.
+
+### UML
+
+![alt text](http://yuml.me/710841ee.png)
+[edit](http://yuml.me/edit/710841ee)
+
+### Previous output
+
+```
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+```
 
 ## Task 2 - Testing
 
