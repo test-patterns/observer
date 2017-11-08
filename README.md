@@ -29,6 +29,20 @@ SMS notification: The pizza just started cooking
 SMS notification: The pizza is done
 ```
 
+### Desired output
+
+```
+SMS notification: The pizza's ingredients have been prepped
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+SMS notification: The pizza's ingredients have been prepped
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+SMS notification: The pizza's ingredients have been prepped
+SMS notification: The pizza just started cooking
+SMS notification: The pizza is done
+```
+
 ## Task 2 - Testing
 
 Our test coverage is pretty terrible. See for yourself by running the following commands:
