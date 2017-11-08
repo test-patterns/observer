@@ -1,6 +1,8 @@
 # Observer Pattern
 Sample problem featuring the observer pattern.
 
+Use the observer pattern when you need many objects to receive an update when another object changes.
+
 ## Task 1 - Add a notification
 
 Welcome to Pizza<sup>2</sup>! Our kitchen already sends notifications when a new pizza has just started cooking, and when a pizza is done, but we can't see when ingredients have been prepped. See for yourself by running the following command:
